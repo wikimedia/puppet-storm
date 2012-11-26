@@ -1,0 +1,14 @@
+# Note: This file is managed by Puppet.
+
+# /etc/default/storm-ui
+
+#_ START? _#
+ENABLE="yes"
+
+#_ UI _#
+<% if @enable_jmxremote -%>
+STORM_UI_JMXREMOTE_OPTS="-Dcom.sun.management.jmxremote.port=<%= ui_jmxremote_port %> -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false"
+<% end -%>
+STORM_UI_PID="/var/run/storm-ui.pid"
+STORM_UI_JVM_MEMORY="<%= @jvm_memory %>"
+STORM_UI_JVM_OPTS="<%= @jvm_opts %> ${STORM_UI_JMXREMOTE_OPTS}"

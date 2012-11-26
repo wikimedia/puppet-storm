@@ -1,0 +1,13 @@
+# Note: This file is managed by Puppet.
+# /etc/default/storm-nimbus
+
+#_ START? _#
+ENABLE="yes"
+
+#_ NIMBUS _#
+<% if @enable_jmxremote -%>
+STORM_NIMBUS_JMXREMOTE_OPTS="-Dcom.sun.management.jmxremote.port=<%= nimbus_jmxremote_port %> -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false"
+<% end -%>
+STORM_NIMBUS_PID="/var/run/storm-nimbus.pid"
+STORM_NIMBUS_JVM_MEMORY="<%= @jvm_memory %>"
+STORM_NIMBUS_JVM_OPTS="<%= @jvm_opts %> ${STORM_NIMBUS_JMXREMOTE_OPTS}"

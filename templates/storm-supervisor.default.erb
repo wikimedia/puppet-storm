@@ -1,0 +1,15 @@
+# Note: This file is managed by Puppet.
+
+# /etc/default/storm-supervisor
+
+
+#_ START? _#
+ENABLE="yes"
+
+#_ SUPERVISOR _#
+<% if @enable_jmxremote -%>
+STORM_SUPERVISOR_JMXREMOTE_OPTS="-Dcom.sun.management.jmxremote.port=<%= supervisor_jmxremote_port %> -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false"
+<% end -%>
+STORM_SUPERVISOR_PID="/var/run/storm-supervisor.pid"
+STORM_SUPERVISOR_JVM_MEMORY="<%= @jvm_memory %>"
+STORM_SUPERVISOR_JVM_OPTS="<%= @jvm_opts%> ${STORM_SUPERVISOR_JMXREMOTE_OPTS}"
