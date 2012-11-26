@@ -3,7 +3,7 @@ A puppet module for installing and running [Storm](http://storm-project.net/).
 
 _Note: This puppet module is meant to work with .debs built by [storm-deb-packaging](https://github.com/wmf-analytics/storm-deb-packaging)_.
 
-# Installation
+# Puppet Module Installation
 Clone (or copy) this repository into your puppet modules/storm directory:
 ```bash
 git clone git://github.com/wmf-analytics/puppet-storm.git
