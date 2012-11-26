@@ -49,8 +49,8 @@ This module requires that a ```storm``` package is available to your package
 management system.  Storm requires [ZeroMQ](http://www.zeromq.org/), so it
 must be available for installation as well.
 
-I built Storm and dependent .debs using (storm-deb-packaging)[https://github.com/wmf-analytics/storm-deb-packaging],
-which is forked and modified from the (original)[https://github.com/phobos182/storm-deb-packaging].
+I built Storm and dependent .debs using [storm-deb-packaging](https://github.com/wmf-analytics/storm-deb-packaging),
+which is forked and modified from the[original](https://github.com/phobos182/storm-deb-packaging).
 The packages are currently (2012-11) available at http://analytics1001.wikimedia.org:81/apt/binary/.
 
 # Wishlist
