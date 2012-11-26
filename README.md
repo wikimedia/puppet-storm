@@ -3,6 +3,18 @@ A puppet module for installing and running [Storm](http://storm-project.net/).
 
 _Note: This puppet module is meant to work with .debs built by [storm-deb-packaging](https://github.com/wmf-analytics/storm-deb-packaging)_.
 
+# Installation
+Clone (or copy) this repository into your puppet modules/storm directory:
+```bash
+git clone git://github.com/wmf-analytics/puppet-storm.git
+```
+
+Or you could also use a git submodule:
+```bash
+git submodule add git://github.com/wmf-analytics/puppet-storm.git modules/storm
+git commit -m 'Adding modules/storm as a git submodule.'
+```
+
 # Usage
 ## Storm installation and config
 All Storm nodes (nimbus, supervisor, ui, etc.) should
