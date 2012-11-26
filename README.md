@@ -1,10 +1,10 @@
-= puppet-storm
+# puppet-storm
 A puppet module for installing and running [Storm](http://storm-project.net/).
 
 _Note: This puppet module is meant to work with .debs built by [storm-deb-packaging](https://github.com/wmf-analytics/storm-deb-packaging)_.
 
-= Usage
-== Storm installation and config
+# Usage
+## Storm installation and config
 All Storm nodes (nimbus, supervisor, ui, etc.) should
 include the ```storm``` class.  This ensures that all
 nodes share the same storm.yaml config file.
@@ -20,14 +20,15 @@ class analytics::storm {
 }
 ```
 
-== Storm Nimbus Master
+## Storm Nimbus Master
 ```puppet
 # inherit from analytics::storm to get Storm installtion and configs
 class analytics::storm::master inherits analytics::storm {
   include storm::nimbus
 }
 ```
-== Storm Supervisor Workers
+
+## Storm Supervisor Workers
 ```puppet
 # inherit from analytics::storm to get Storm installtion and configs
 class analytics::storm::worker inherits analytics::storm {
@@ -35,7 +36,7 @@ class analytics::storm::worker inherits analytics::storm {
 }
 ```
 
-== Storm Web UI
+## Storm Web UI
 ```puppet
 # inherit from analytics::storm to get Storm installtion and configs
 class analytics::storm::ui inherits analtyics::storm {
@@ -43,7 +44,7 @@ class analytics::storm::ui inherits analtyics::storm {
 }
 ```
 
-= Requirements
+# Requirements
 This module requires that a ```storm``` package is available to your package
 management system.  Storm requires [ZeroMQ](http://www.zeromq.org/), so it
 must be available for installation as well.
