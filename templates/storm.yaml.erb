@@ -12,7 +12,7 @@ storm.local.dir: <%= storm_local_dir %>
 # a single worker on this node.
 supervisor.slots.ports:
 <% worker_count.times do |i| -%>
-  - <%= "670#{i}" %>
+  - <%= 6700 + i %>
 <% end -%>
 <% end -%>
 
