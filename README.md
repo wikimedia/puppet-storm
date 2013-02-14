@@ -6,7 +6,7 @@ _Note: This puppet module is meant to work with .debs built by [storm-deb-packag
 # Puppet Module Installation
 Clone (or copy) this repository into your puppet modules/storm directory:
 ```bash
-git clone git://github.com/wmf-analytics/puppet-storm.git
+git clone git://github.com/wikimedia/puppet-storm.git
 ```
 
 Or you could also use a git submodule:
