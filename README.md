@@ -1,7 +1,7 @@
 # puppet-storm
 A puppet module for installing and running [Storm](http://storm-project.net/).
 
-_Note: This puppet module is meant to work with .debs built by [storm-deb-packaging](https://github.com/wmf-analytics/storm-deb-packaging)_.
+_Note: This puppet module is meant to work with .debs built by [storm-deb-packaging](https://github.com/wikimedia-incubator/storm-deb-packaging)_.
 
 # Puppet Module Installation
 Clone (or copy) this repository into your puppet modules/storm directory:
@@ -11,7 +11,7 @@ git clone git://github.com/wikimedia/puppet-storm.git
 
 Or you could also use a git submodule:
 ```bash
-git submodule add git://github.com/wmf-analytics/puppet-storm.git modules/storm
+git submodule add git://github.com/wikimedia/puppet-storm.git modules/storm
 git commit -m 'Adding modules/storm as a git submodule.'
 ```
 
@@ -61,9 +61,8 @@ This module requires that a ```storm``` package is available to your package
 management system.  Storm requires [ZeroMQ](http://www.zeromq.org/), so it
 must be available for installation as well.
 
-I built Storm and dependent .debs using [storm-deb-packaging](https://github.com/wmf-analytics/storm-deb-packaging),
+I built Storm and dependent .debs using [storm-deb-packaging](https://github.com/wikimedia-incubator/storm-deb-packaging),
 which is forked and modified from the [original](https://github.com/phobos182/storm-deb-packaging).
-The packages are currently (2012-11) available at http://analytics1001.wikimedia.org:81/apt/binary/.
 
 # Wishlist
 - Puppetize [Storm DRPC](https://github.com/nathanmarz/storm/wiki/Distributed-RPC).
